@@ -8,6 +8,10 @@
           MyRemoteInterface handle =
                   (MyRemoteInterface) reg.lookup("myrmiserver");
 
-          handle.printMessage("Wassup!");
-      }
+          while(true){ 
+          Scanner sc = new Scanner(System.in);
+          System.out.print("Enter message: ");
+          String message = sc.nextLine();
+          handle.printMessage(message);
+          }
   }
