@@ -21,15 +21,6 @@ package rmiExample1;
           Registry reg = LocateRegistry.getRegistry("148.197.96.112", 1234) ;
           MyRemoteInterface handle=(MyRemoteInterface) reg.lookup("myrmiserver");
           
-         
-          while(true){ 
-          Scanner sc = new Scanner(System.in);
-          System.out.print("Enter message: ");
-          String message = sc.nextLine();
-          handle.printMessage(message);
-          
-      }
-
       public MyServer() throws RemoteException {}
   }
 
